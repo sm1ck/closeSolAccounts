@@ -1,0 +1,21 @@
+# Исключаем папку с зависимостями
+node_modules/
+
+# Исключаем package-lock.json
+package-lock.json
+
+# Исключаем файл с приватными ключами
+solana.txt
+
+# Дополнительно можно исключить файлы сборки TypeScript
+dist/
+build/
+
+# Файлы настроек среды разработки
+.env
+.vscode/
+.idea/
+
+# Файлы операционной системы
+.DS_Store
+Thumbs.db
