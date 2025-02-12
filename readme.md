@@ -25,8 +25,8 @@
 1. **Клонируйте репозиторий:**
 
    ```bash
-   git clone <URL вашего репозитория>
-   cd <название папки с проектом>
+   git clone https://github.com/sm1ck/closeSolAccounts
+   cd closeSolAccounts
    ```
 2. **Установите зависимости:**
 
