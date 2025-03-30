@@ -7,6 +7,7 @@
 ## Описание
 
 При получении токенов или NFT в вашем кошельке для каждого актива создаётся отдельный SPL Token аккаунт. После отправки токенов такие аккаунты могут оставаться пустыми, продолжая блокировать SOL в виде арендной платы. Данный скрипт:
+
 - Сканирует все SPL Token аккаунты для заданного кошелька.
 - Фильтрует пустые аккаунты (где баланс равен 0).
 - Разбивает инструкции закрытия на батчи (для уменьшения размера транзакций).
@@ -28,36 +29,43 @@
    git clone https://github.com/sm1ck/closeSolAccounts
    cd closeSolAccounts
    ```
+
 2. **Установите зависимости:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
+
 ## Настройка
+
 1. **Создание solana.txt**
 
-    Создайте файл solana.txt в корне проекта. В каждой строке укажите приватный ключ кошелька в формате Base58.
+   Создайте файл solana.txt в корне проекта. В каждой строке укажите приватный ключ кошелька в формате Base58.
 
-    Пример:
+   Пример:
 
+   ```
+   4nY58Z7xpJ...W4f7mrLmZ3
+   3qRnvM49dj...kKjQxvYkPv
+   ```
 
-    ```
-    4nY58Z7xpJ...W4f7mrLmZ3
-    3qRnvM49dj...kKjQxvYkPv
-    ```
 2. **Создание .env**
 
-    Создайте файл .env в корне проекта и добавьте параметры:
+   Создайте файл .env в корне проекта и добавьте параметры:
 
-    ```env
-    RPC_URL=https://mainnet.helius-rpc.com/?api-key=your-api-key
-    BATCH_SIZE=20
-    DELAY_MIN=20
-    DELAY_MAX=180
-    ```
+   ```env
+   RPC_URL=https://mainnet.helius-rpc.com/?api-key=your-api-key
+   BATCH_SIZE=20
+   DELAY_FROM=20
+   DELAY_TO=180
+   ```
+
 ## Запуск
+
 ```bash
 npm start
 ```
+
 ## Автор
+
 [tg: @Web3_coding](https://t.me/web3_coding)
